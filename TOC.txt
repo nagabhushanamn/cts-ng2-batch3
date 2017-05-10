@@ -1,0 +1,85 @@
+
+
+
+ 1. JavaScript
+
+    a. data-TypeScript
+    b. execution-contexts ( scope )
+    c. function-depth
+    d. closures
+    e. Inhertitance
+    f. object-adv
+    g. ES6 - New Features
+    h. JS-module standards ( commonJS , ES6 modules)
+    i. Concurrency Model with EventLoop
+    j. JS - best practices / patterns
+
+ 2. TypeScript
+
+     -> .js with types
+
+ 3. Angular-2
+
+        --> new F.W to develope client-appln 
+
+
+
+------------------------------------------------------------------------------
+
+
+
+till ES5, .js-lang is not module based pgmming lang        
+
+
+
+ problems : .js-coding without module-standards & loaders
+
+ --> global naming collisions
+ --> dificult to implement Abstraction & Encapsulations
+ --> loading module in order based on dependecy hierarchy
+
+
+ soln:
+
+    using Module-standards and Module-loaders
+
+
+    from third-party
+
+    a. AMD ( Async Module Definition )
+    b. commonJS  ( default to Node.js )  
+    c. UMD
+    d. SystemJS
+
+    from ECMAScript 
+
+    e. ES6 Modules  
+
+    -------------------------------------------------
+
+
+
+    commonJS Module-standard
+    -----------
+
+
+    --> every .js file is an module by default
+    --> all var & func in that .js file, are private to that module.
+    --> to abstract/exports nay meber to other modules , use "module.exports"
+    --> to import any member(s) from other module , use "require()"
+    --> group related modules into packages with description file ( package.json)
+    --> Node.js used commonJS as default module standard
+
+
+    ES6 Modules
+    -----------
+
+    ---> every .js file is an module by default
+    ---> all var & func in that .js file, are private to that module.
+    ---> to abstract/exports nay meber to other modules , use "export"
+    ---> to import any member(s) from other module , use "import"
+
+    
+
+
+

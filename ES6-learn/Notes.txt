@@ -1,0 +1,32 @@
+
+
+  latest version .js-lang  ==> ECMAScript 2015 or ES6
+
+
+
+  New Syntax
+  -----------
+
+  1. let, const keywords and block scope
+  2. arrow function
+  3. function default params
+  4. rest parameter
+  5. destructuring
+  6. spread operator
+  7. enhanced obj literals
+  8. for-of loop
+  9. octal & binary epresentations
+  10. string interpolation 
+  11. class
+  12. modules
+  13. collections
+  14. symbol data-type
+  15. Ierators & Generators
+  16. New API Extensions
+  17. Promise API  --> deferred objects
+
+  -----------------------------------------
+
+  TypeScript
+
+  
