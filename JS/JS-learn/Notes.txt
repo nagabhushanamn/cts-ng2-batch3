@@ -1,0 +1,32 @@
+
+
+
+    chrome      ==> v8 ( c++ )
+    IE/Edge     ==> chakra
+    firfox      ==> rhino ( java )
+    safari      ==> nitro 
+
+
+
+  .js-lang
+
+    --> single-threaded lang , we able to implement concurrent actions
+    --> IO operations are Non_blocking
+
+
+    e.g chrome browser
+
+
+    1. JS-runtime/engine  ( v8 )  based on ECAMScript spec
+
+        a. single-call-stack  ==> to execute functions
+        b. heap   ==> to keep objects
+
+
+     2. browser Web APIs ( e.g DOM , XHR, Timer , HTML5 APIs ) are based on w3c standards
+
+     3. Event-Queue
+
+     4. Event-Loop
+
+     //------------------------------------------------------------

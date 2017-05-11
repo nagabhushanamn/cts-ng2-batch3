@@ -1,0 +1,21 @@
+
+
+.js-lang
+----------
+
+ --> dynamic data-types
+
+     
+
+     problems with .js-lang to developers
+     ------------------------------------
+
+     --> difficult to debug due to dynamic data-types
+
+
+
+     soln :
+
+         -> TypeScript
+
+-----------------------------------         

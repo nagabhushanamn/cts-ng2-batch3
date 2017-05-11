@@ -21,12 +21,14 @@
   12. modules
   13. collections
   14. symbol data-type
-  15. Ierators & Generators
+  15. Iterators & Generators
   16. New API Extensions
+
   17. Promise API  --> deferred objects
 
   -----------------------------------------
 
   TypeScript
-
+  
+  -----------------------------------------
   
