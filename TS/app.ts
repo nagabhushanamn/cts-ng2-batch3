@@ -82,9 +82,6 @@
 
 //---------------------------------------------------------
 
-
-
-
 // function sayHello(name:string):string {
 //     return "Hello " + name;
 // }
@@ -126,23 +123,161 @@
 // greetFunc("Nag");
 
 
-
 //---------------------------------------------------------
-
 
 // Overloaded functions
 
-function getFood(): string;
-function getFood(pay: number): string;
-function getFood(inp?: any):string {
-    if (inp === undefined) {
-        return "No Food";
-    }
-    if (typeof inp === "number") {
-        return "Biryani";
-    }
-}
+// function getFood(): string;
+// function getFood(pay: number): string;
+// function getFood(inp?: any):string {
+//     if (inp === undefined) {
+//         return "No Food";
+//     }
+//     if (typeof inp === "number") {
+//         return "Biryani";
+//     }
+// }
 
-console.log(getFood());
+// console.log(getFood());
 
 //---------------------------------------------------------
+
+
+
+//  Interfaces
+// ------------------
+
+/*
+   --> contract b/w dependent & dependency
+   --> abstraction of dependecy implementation
+
+*/
+
+
+
+// interface Wheel{
+//     rotate: () => void; // abstract
+// }
+
+// // dependency(s)
+
+// class MRFWheel implements Wheel{
+//     rotate() {
+//         console.log('MRF-Wheel rotating...');
+//     }
+// }
+
+// class CEATWheel implements Wheel{
+//     rotate() {
+//         console.log('MRF-Wheel rotating...');
+//     }
+// }
+
+
+// // dependent
+// class Car{
+//     wheel: Wheel;
+//     constructor(wheel: Wheel) {
+//         this.wheel = wheel;
+//     }
+//     move() {
+//         this.wheel.rotate();
+//         console.log("car moving...");
+//     }
+// }
+
+// let mrfWheel = new MRFWheel();
+// let ceatWheel = new CEATWheel();
+
+// let car = new Car(ceatWheel);
+// car.move();
+
+
+//---------------------------------------------
+
+
+
+// interface IProduct{
+//     id: number;
+//     name: string;
+//     price: number;
+//     description?: string;
+//     buy:()=>void
+// }
+
+
+// // class Product implements IProduct{
+// //     id: number;
+// //     name: string;
+// //     price: number;
+// //     description?: string;
+// //     buy(){
+
+// //     }
+// // }
+
+// let product:IProduct={id:23123,name:"Laptop",price:123123,buy:()=>{}};
+
+
+
+//--------------------------------------------------------
+
+
+
+// classes
+
+
+// class Product{
+//     public name:string;
+//     _price:number; // indication , this property is internal rpoperty
+//     constructor(name:string,price?:number){
+//         this.name=name;
+//         this._price=price;
+//     }
+//     set price(price){
+//         if(price>0){
+//             this._price=price;
+//         }
+//     }
+//     get price(){
+//         return this._price;
+//     }
+// }
+
+// let product=new Product('laptop');
+// product.price=100;  // set
+
+// product.price=0;
+
+// console.log(product.price);// get
+
+//--------------------------------------------------------------
+
+
+// abstract class
+
+
+// abstract class LivingThing{
+//     eat(){}
+//     sleep(){};
+//     abstract work():void;
+// }
+
+
+// class Human extends LivingThing{
+//     work(){}
+// }
+
+// class Animal extends LivingThing{
+//     work(){}
+// }
+
+// // let live=new LivingThing();
+
+
+//--------------------------------------------------------------
+
+
+
+
+

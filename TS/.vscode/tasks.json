@@ -6,7 +6,7 @@
     "isShellCommand": true,
     "args": [
         "--target","ES5",
-        "--outDir","js",
+        "--outDir","dist",
         "--sourceMap",
         "--watch",
         "app.ts"

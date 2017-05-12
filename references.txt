@@ -1,0 +1,128 @@
+
+
+----------------------------------------
+1. JavaScript
+
+    -> MDN JavaScript
+    -> http://exploringjs.com/
+
+------------------------------------------
+
+2. TypeScript
+
+    -> https://www.typescriptlang.org/    
+
+------------------------------------------    
+
+
+motivation => developing client-side web-application
+
+--------------------------------------------
+
+
+ ==> Html -> content
+ ==> css  -> styling
+
+
+ what .js-lang can do on html-pages in browser envi?
+
+ .js-lang using browser proveded Web APIs , can do any dyncamic activity on html page.
+
+  Web APIs 
+
+  e.g DOM, XHR , Timer , ......  are based on W3c standards
+
+  using DOM
+  ------------
+  --> can create,retreive,update.delete html elements
+  --> can change element's text or inner content
+  --> can change element's style
+  --> can change element's properties/attributes
+  --> can listen events
+  --> can create rich/complex UI components
+  etc...
+
+  using XHR
+  ----------
+  --> can communicate with server-side async, update resp in page ( AJAX )
+
+ using Timer API
+ ---------------
+
+ setTimeout(), setInterval()
+
+ HTML5 - New APIs
+ -------------------
+
+    --> https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5
+
+----------------------------------------------------------------------
+
+
+(html + css + .js) + browser's APIs ==> front-end appln 
+
+
+    problems with plain-js ( our code ) 
+
+  --> browser compatibility issues  ( ref - caniuse.com)
+  --> performance issues need to taken-care manually ( e.g DOM manipulation ( e.g query , update , delete ))
+  --> memory management ( e.g cleaning un-used DOM elements properly)   
+  --> data-binding is manual ( read-input & write output) 
+  --> too much code for simple operations
+  --> code organization is difficult
+  --> security and vulnarability also considered
+  --> etc...
+
+  soln : using good .js-libaries and F.ws from third-parties
+
+
+        jQuery
+
+        --> very good DOM helper library
+
+        limitations
+
+        --> close to DOM
+        --> code organization is difficult
+        --> data-binding is manual
+        --> not suffcient for large sized front-appln
+
+        js-lib and Frameworks which are based on MVC/MVVM
+
+        a. Backbone
+        b. Knockout
+        c. Angularjs 1.x
+        ....
+
+
+        UI component based F.Ws
+
+        a. DOJO
+        b. Ext JS
+        .......
+   
+        
+        -----------------------------------------
+
+        w3c drafted one standards
+
+            --> web-component ( custom-elements/tags)
+
+
+       --------------------------------------------
+
+
+       component-based .js lib and F.ws
+
+
+       --> React from facebook   
+       --> Angular  ==> component based js f.w ( our course )
+       --> vue
+       --> Polymer js
+
+        ...........
+
+
+       
+
+
