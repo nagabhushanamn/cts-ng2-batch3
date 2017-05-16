@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="page-header"> NG forms </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-8">
+
+      <form #empForm #empNgForm="ngForm" (submit)="addEmployee(empNgForm,$event)">
+        <div class="form-group" [class.has-error]="firstName.invalid && firstName.touched">
+          <label> First Name </label>
+          <input #firstName="ngModel" class="form-control" name="firstName" autofocus required pattern="...+" [ngModel]="empModel.firstName"
+            (ngModelChange)="empModel.firstName=$event" />
+          <div class="help-block" *ngIf="firstName.invalid && firstName.touched">
+            Name is Required and min 3 char length
+          </div>
+          
+        </div>
+
+        <div class="form-group">
+          <label> Last Name </label>
+          <input class="form-control" name="lastName" [(ngModel)]="empModel.lastName"/>
+        </div>
+        
+        <div class="form-group">
+          <label> is full-time employee? </label>
+          <input type="checkbox" name="isFullTime"  [(ngModel)]="empModel.isFullTime"/>
+        </div>
+
+       
+        <label> Gender </label>
+        <div class="form-group">
+          <input type="radio" name="gender" value="male" [(ngModel)]="empModel.gender"/> Male
+        </div>
+        <div class="form-group">
+          <input type="radio" name="gender" value="female" [(ngModel)]="empModel.gender"/> Female
+        </div>
+
+       
+        <div class="form-group" [class.has-error]="primarylanguageError">
+          <label> Language </label>
+          <select #primaryLanguage="ngModel" 
+                  class="form-control" 
+                  required name="primaryLang" 
+                  [(ngModel)]="empModel.primaryLanguage"
+                  (change)="validatePrimarylanguage(primaryLanguage.value)"
+                  (blur)="validatePrimarylanguage(primaryLanguage.value)"
+                  >
+            <option default value="default">select language</option>
+            <option *ngFor="let lang of languages">{{lang}}</option>
+          </select>
+        </div>
+
+        
+        <button class="btn btn-primary" type="submit"  [disabled]="empNgForm.invalid">submit</button>
+
+      </form>
+    </div>
+  </div>
+  <hr/>
+</div>

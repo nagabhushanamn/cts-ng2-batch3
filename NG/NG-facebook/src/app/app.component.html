@@ -1,0 +1,5 @@
+<div class="container">
+  <div class="page-header">{{title}}</div>
+  <app-story-form (newStory)="addNewStory($event)"></app-story-form>
+  <app-story-list [stories]="stories"></app-story-list>
+</div>

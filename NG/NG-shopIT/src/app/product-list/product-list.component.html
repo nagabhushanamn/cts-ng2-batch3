@@ -1,11 +1,8 @@
-<div class="alert alert-info">{{getTotalProducts()}} in shop</div>
+<div class="alert alert-warning">{{getTotalProducts()}} in shop</div>
 <div class="list-group">
-    <div *ngFor="let product of products|slice:0:2;let idx=index;" class="list-group-item product-bg">
-        <span class="badge">{{idx+1}}</span>
-        <h3>{{product.name|uppercase}} <small>{{product.makeDate|date:'yyyy'}}</small></h3>
-        <h4>{{product.price|currency:'INR':true}}</h4>
-        <p>{{product.description}}</p>
-        <button *ngIf="product.canBuy" class="btn btn-primary bt-sm">buy</button>
-        <!--<pre>{{product|json}}</pre>-->
-    </div>
+    
+    <div *ngFor="let product of products;let i=index">
+        <product-component [product]="product" [idx]="i"></product-component>
+    </div>    
+
 </div>

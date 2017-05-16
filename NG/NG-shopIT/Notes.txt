@@ -1,0 +1,12 @@
+
+
+Angular CLI
+
+------------------------------
+
+ data-binding 
+
+ --> interpolation     
+ --> property binding
+ --> event binding
+ --> 2-way binding

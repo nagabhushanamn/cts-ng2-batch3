@@ -1,0 +1,7 @@
+
+
+
+
+ step-1 : create employee form with bootstrap style
+ step-2 : bind model to form fields
+ step-3 : How to validate form fields

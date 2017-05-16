@@ -1,0 +1,70 @@
+<div class="list-group-item product-margin" [class.product-discount-bg]="product.discount">
+    <div class="row">
+        <div class="col-xs-6 col-sm-3 col-md-3">
+            <img [src]="product.images[0].thumb" class="img-responsive" />
+        </div>
+        <div class="col-xs-6 col-sm-9 col-md-9">
+            <span class="badge">{{idx+1}}</span>
+            <h3>{{product.name|uppercase}} <small>{{product.makeDate|date:'yyyy'}}</small></h3>
+            <h4>{{product.price|currency:'INR':true}} | <small [innerText]="product.discount|currency:'INR':true"></small> </h4>
+            <hr/>
+            <button class="btn btn-default" on-click="downQty()">-</button>
+            <input class="inp-sm" size="2" [(ngModel)]="qty" />
+            <button class="btn btn-default" (click)="upQty()">+</button>
+            <hr/>
+            <button (click)="buy(product)" class="btn btn-primary bt-sm" [disabled]="!product.canBuy">buy</button>
+            <!--<pre>{{product|json}}</pre>-->
+            <hr/>
+            <section>
+                <ul class="nav nav-tabs">
+                    <li [class.active]="isTabSelected(1)"><a (click)="handleTabChange(1,$event)" href>Description</a></li>
+                    <li [class.active]="isTabSelected(2)"><a (click)="handleTabChange(2,$event)" href>Specification</a></li>
+                    <li [class.active]="isTabSelected(3)"><a (click)="handleTabChange(3,$event)" href>Reviews</a></li>
+                </ul>
+                <div class="panel" *ngIf="isTabSelected(1)">
+                    <p>{{product.description}}</p>
+                </div>
+                <div class="panel" *ngIf="isTabSelected(2)">
+                    Not Yet
+                </div>
+                <div class="panel" *ngIf="isTabSelected(3)">
+                    <div class="alert alert-info" *ngFor="let review of product.reviews">
+                        <span class="badge" [innerText]="review.stars"></span>
+                        <span class="badge" [innerText]="review.author"></span>
+                        <hr/>
+                        <p>{{review.comment}}</p>
+                    </div>
+                    <hr/>
+                    <blockquote *ngIf="newReview.comment">
+                        <span class="badge" [innerText]="newReview.stars"></span>
+                        <span class="badge" [innerText]="newReview.author"></span>
+                        <hr/>
+                        <p>{{newReview.comment}}</p>
+                    </blockquote>    
+                    <hr/>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Review Form</div>
+                        <div class="panel-body">
+                            <form name="reviewForm" #reviewForm="ngForm" (submit)="submitNewReview(product,$event,reviewForm)">
+                                <div class="form-group" [class.has-error]="stars.invalid && reviewForm.submitted">
+                                    <label>stars</label>
+                                    <input #stars="ngModel" required class="form-control" name="stars" [(ngModel)]="newReview.stars" />
+                                </div>
+                                <div class="form-group" [class.has-error]="author.invalid && reviewForm.submitted">
+                                    <label>author</label>
+                                    <input #author="ngModel" required type="email" class="form-control" name="author" [(ngModel)]="newReview.author"/>
+                                </div>
+                                <div class="form-group" [class.has-error]="comment.invalid && reviewForm.submitted">
+                                    <label>comment</label>
+                                    <textarea #comment="ngModel" required cols="35" rows="5" class="form-control" name="comment" [(ngModel)]="newReview.comment"></textarea>
+                                </div>
+                                <button class="btn btn-primary">submit</button>
+                                {{reviewForm.submitted}}
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

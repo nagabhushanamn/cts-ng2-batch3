@@ -1,0 +1,15 @@
+<h1>
+  {{title}}
+</h1>
+<hr/>
+
+<form class="col-md-6" (submit)="addNewMessage($event,messageField)">
+    <div class="form-group">
+      <label>Enter Message : </label>
+      <input class="form-control" #messageField/>
+    </div>  
+</form>  
+
+<hr/>
+
+<app-message-list [messages]="messages"  (delete)="deleteMessage($event)"></app-message-list>

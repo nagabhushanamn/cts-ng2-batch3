@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading"> Counter App </div>
+    <div class="panel-body">
+      <div class="page-header"> NG-component basics </div>
+      <app-hit-button (onHit)="incCount($event)" [incBy]="1"></app-hit-button>
+      <app-hit-button (onHit)="incCount($event)" [incBy]="10"></app-hit-button>
+      <app-hit-button (onHit)="incCount($event)" [incBy]="100"></app-hit-button>
+      <app-hit-button (onHit)="incCount($event)" [incBy]="1000"></app-hit-button>
+      <hr/>
+      <app-hit-count-display [count]="totalCount"></app-hit-count-display>
+    </div>
+  </div>
+</div>

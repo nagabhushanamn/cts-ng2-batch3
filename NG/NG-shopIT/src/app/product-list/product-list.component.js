@@ -7,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var ProductList = (function () {
-    function ProductList() {
+var ProductListComponent = (function () {
+    function ProductListComponent() {
         this.products = [
             {
                 id: 1,
@@ -16,7 +16,15 @@ var ProductList = (function () {
                 price: 198000,
                 description: 'New Mac Pro',
                 canBuy: true,
-                makeDate: Date.now()
+                discount: 0,
+                makeDate: Date.now(),
+                images: [
+                    { thumb: 'images/Laptop.png', full: '' }
+                ],
+                reviews: [
+                    { stars: 5, author: 'nag@email.com', comment: 'good one' },
+                    { stars: 2, author: 'indu@email.com', comment: 'costly' }
+                ]
             },
             {
                 id: 2,
@@ -24,21 +32,29 @@ var ProductList = (function () {
                 price: 8000,
                 description: 'New mobile',
                 canBuy: false,
-                makeDate: Date.now()
+                discount: 0,
+                makeDate: Date.now(),
+                images: [
+                    { thumb: 'images/Mobile.png', full: '' }
+                ],
+                reviews: [
+                    { stars: 5, author: 'nag@email.com', comment: 'good one' },
+                    { stars: 2, author: 'indu@email.com', comment: 'costly' }
+                ]
             }
         ];
     }
-    ProductList.prototype.getTotalProducts = function () {
+    ProductListComponent.prototype.getTotalProducts = function () {
         return this.products.length;
     };
-    return ProductList;
+    return ProductListComponent;
 }());
-ProductList = __decorate([
+ProductListComponent = __decorate([
     core_1.Component({
         selector: 'product-list',
         templateUrl: './product-list.component.html',
         styleUrls: ['./product-list.component.css']
     })
-], ProductList);
-exports.ProductList = ProductList;
+], ProductListComponent);
+exports.ProductListComponent = ProductListComponent;
 //# sourceMappingURL=product-list.component.js.map

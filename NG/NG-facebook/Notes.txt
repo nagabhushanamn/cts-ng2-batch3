@@ -1,0 +1,12 @@
+
+
+
+--------------------------
+
+AppComponent
+
+   - NewStoryFormComponent
+   - StoryListComponent
+        -Story(s)Component
+
+--------------------------    
