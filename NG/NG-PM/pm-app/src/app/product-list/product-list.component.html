@@ -1,0 +1,22 @@
+<div class="panel panel-primary" *ngIf="!errorMessage">
+  <div class="panel-heading">All Products </div>
+  <div class="panel-body">
+    <table class="table">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Discount</th>
+        <th>Price</th>
+        <th>Make</th>
+      </tr>
+      <tr *ngFor="let item of products">
+        <td>{{item.id}}</td>
+        <td><a [routerLink]="['/products/',item.id]">{{item.name}}</a></td>
+        <td>{{item.discount|currency:'INR':true}}</td>
+        <td>{{item.price|productDiscount:item.discount|currency:'INR':true}}</td>
+        <td>{{item.make|date:'dd/MM/yyyy'}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="alert alert-danger">{{errorMessage}}</div>
